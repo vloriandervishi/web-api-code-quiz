@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  
+  </head>
+  <body>
+    <header>
+      <div class="header" href="#YourHighScore">YourHighScore</div>
+      <div id="countdown"></div>
+    </header>
+    <div class="container">
+      <div id="welcome">
+        <h1 class="welcome">Code Quiz</h1>
+      <p class="pcontent">
+        When you click start the timer will activate and the quiz will start, wrong answers will reduce the amount time you have left good luck!
+      </p></div>
+      <div id="start">
+        <!-- After the button is pressed instead of starting the time i
+        goes to another page displays the questions and the choices and displays the time at the same time. -->
+        <button class="begin">Start</button>
+      </div>
+      <div class="options">
+          <div class="opion">Question </div>
+          <div class="options" id="A"onclick="chck('A')">A</div>
+          <div class="options" id="B"onclick="chck('B')">B</div>
+          <div class="options" id="C"onclick="chck('C')">C</div>
+          <div class="options" id="D"onclick="chck('D')">D</div>
+      </div>
+    <script src="./assets/script/script.js"></script>
+  </body>
+</html>

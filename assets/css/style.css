@@ -1,0 +1,50 @@
+.header {
+    display:flex;
+    flex-direction: row;
+    color: rebeccapurple;
+  }
+  #countdown{
+    display:flex;
+    flex-direction:row-reverse;
+    
+  }
+  /* Center the Button and the content */
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;  
+  }
+  .welcome {
+    display:flex;
+    flex-direction: column-reverse;
+    text-align:center;
+  }
+  .start {
+    display:flex;
+    }
+  .pcontent {
+    text-align: center;
+    font-size: 2rem;
+    color:rebeccapurple;
+  }
+  
+  
+  #countdown {
+    border-color: yellow;
+  }
+  /*            Ends Here */
+  
+  h1 {
+     font-size:3rem;
+     color:rebeccapurple;
+  }
+  
+  button {
+     /* increase the size of the button */
+     color:rebeccapurple;
+      height: 54px;
+      width: 175px;
+      background-color: lavender;
+  }
+  
