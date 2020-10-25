@@ -49,5 +49,11 @@
   }
   
   #questioncontainer {
-    margin: 30px;
+   display: flex;
+   justify-content: center;
   }
+#options {
+  margin: 150px;
+  font-size:4rem;
+  line-height:
+}
