@@ -56,6 +56,7 @@ function countdown(){
 }
 
 startQuiz = () => {
+   
     questionCounter = 0;
     score = 0;
     remainingQuestions = [...questions];
@@ -84,11 +85,15 @@ choices.forEach(choice => {
         const displayedQuestion = e.target;
         const chosenAnswer = displayedQuestion.dataset["letter"];
         const classToApply = chosenAnswer == currentQuestion ? "correct" : "wrong";
-
+        if(classToApply)
+        {
+            score++;
+        console.log(score);
+        }
         getNextQstn();
     });
 })
-addEventListener("click",countdown());
+beginQuiz=countdown();
 startQuiz();
 
 
