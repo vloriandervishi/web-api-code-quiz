@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .header {
     display:flex;
     flex-direction: row;
@@ -49,10 +52,12 @@
   }
   
   #questioncontainer {
+    width:100vw;
+    height:100vh;
    display: flex;
    justify-content: center;
    margin-bottom: 0.5rem;
-   font-size: 1.8rem;
+   font-size: 10rem;
    
   }
   #D:hover {
@@ -73,7 +78,7 @@
   }
 #options {
   margin: 150px;
-  font-size:4rem;
+  font-size:1rem;
 }
 #A,
 #B,
@@ -84,4 +89,18 @@
  border: 0.1rem solid rebeccapurple;
  background-color: rebeccapurple;
  color: white;
+}
+.choice-text {
+  padding:1rem 1rem;
+}
+#question {
+  margin: 3rem;
+  
+}
+.correct {
+  
+  color: green;
+}
+.incorrect {
+  color: red;
 }
