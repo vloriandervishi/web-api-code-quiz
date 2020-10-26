@@ -9,11 +9,11 @@ const D= document.getElementById("D");
 
  let questions = [{
      question:"What does HTML stand for?",
-     a:"??",
-     b:"??",
-     c:"??1",
-     d:"?? 1",
-     correct:"A"
+     a:"A.first question",
+     b:"B.??",
+     c:"C.??1",
+     d:"D.?? 1",
+     correct:"??"
     },
  {
      question:"What do you type first in html?",
@@ -21,7 +21,7 @@ const D= document.getElementById("D");
      b:"??",
      c:"??",
      d:"??",
-     correct:"C" 
+     correct:"??" 
  },
  {
      question:"What was the l",
@@ -29,7 +29,7 @@ const D= document.getElementById("D");
      b:"??",
      c:"??",
      d:"??",
-     correct:"B"
+     correct:"??"
  }
       
  ]
@@ -41,15 +41,18 @@ const D= document.getElementById("D");
 
  function sortQuestion(){
     //  loaded question array holder to sort through object array
-     let lqah=questions[dashQuestion];
+     
+    let lqah=questions[dashQuestion];
+     
      quizContent.innerHTML=lqah.question;
-     A.innerHTML=lqah.a;
+     A.innerText=lqah.a;
      B.innerHTML=lqah.b;
      C.innerHTML=lqah.c;
      D.innerHTML=lqah.d;
+    
  }
-
-
  sortQuestion();
+
+ 
 
 

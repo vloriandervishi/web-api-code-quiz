@@ -51,9 +51,37 @@
   #questioncontainer {
    display: flex;
    justify-content: center;
+   margin-bottom: 0.5rem;
+   font-size: 1.8rem;
+   
+  }
+  #D:hover {
+    cursor:pointer;
+    box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+  }
+  #A:hover{
+    cursor:pointer;
+    box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+  }
+  #B:hover {
+    cursor:pointer;
+    box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+  }
+  #C:hover{
+    cursor:pointer;
+    box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
   }
 #options {
   margin: 150px;
   font-size:4rem;
-  line-height:
+}
+#A,
+#B,
+#C,
+#D
+{
+  margin:0.1rem;
+ border: 0.1rem solid rebeccapurple;
+ background-color: rebeccapurple;
+ color: white;
 }
