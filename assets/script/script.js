@@ -88,7 +88,7 @@ choices.forEach(choice => {
         getNextQstn();
     });
 })
-beginQuiz.onclick=countdown;
+
 startQuiz();
 
 
