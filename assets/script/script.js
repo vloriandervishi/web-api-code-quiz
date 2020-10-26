@@ -1,4 +1,4 @@
-const beginQuiz = document.getElementById("button");
+const beginQuiz = document.getElementById("begin");
 const time = document.getElementById("countdown");
 const totalScore = document.getElementById("header");
 const question = document.getElementById("question");
@@ -42,7 +42,7 @@ function countdown(){
     var timeLeft= 30;
     var timeInterval=setInterval(function(){
         if(timeLeft>1){
-            time.textContent=timeleft+ 'seconds remianing';
+            time.textContent=timeLeft+ 'seconds remianing';
             timeLeft--;
         }else if(timeLeft===1){
             time.textContent=timeLeft + 'seconds remaining';
@@ -64,7 +64,7 @@ startQuiz = () => {
 }
 getNextQstn = () => {
     if (remainingQuestions.length === 0 || questionCounter > endOfQuestion) {
-        return window.location.assign('/end.html')
+        return window.location.assign('/yourHighScore.html')
     }
     questionCounter++;
     currentQuestion = remainingQuestions[Math.floor(Math.random() * remainingQuestions.length)];
@@ -88,8 +88,9 @@ choices.forEach(choice => {
         getNextQstn();
     });
 })
-
+addEventListener("click",countdown());
 startQuiz();
+
 
 
 
