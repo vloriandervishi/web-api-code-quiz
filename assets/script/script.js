@@ -38,7 +38,7 @@ let questionCounter = 0;
 let remainingQuestions = [];
 
 function countdown(){
-    time.textContent= '';
+    time.textContent='';
     var timeLeft= 30;
     var timeInterval=setInterval(function(){
         if(timeLeft>1){
@@ -46,11 +46,13 @@ function countdown(){
             timeLeft--;
         }else if(timeLeft===1){
             time.textContent=timeLeft + 'seconds remaining';
+           
             timeLeft--;
+            
         }else {
             time.textContent=" ";
             clearInterval(timeInterval);
-        
+            
         }
     },1000);
 }
@@ -64,18 +66,22 @@ startQuiz = () => {
     getNextQstn();
 }
 getNextQstn = () => {
-    if (remainingQuestions.length === 0 || questionCounter > endOfQuestion) {
-        return window.location.assign('/yourHighScore.html')
+     questionCounter++;
+    if (questionCounter > endOfQuestion) {
+        localStorage.setItem('score',score);
+        
+        return window.location.assign('/index.html')
+        
     }
-    questionCounter++;
-    currentQuestion = remainingQuestions[Math.floor(Math.random() * remainingQuestions.length)];
+   
+    currentQuestion = remainingQuestions[questionCounter-1];
     question.innerHTML = currentQuestion.question;
 
     choices.forEach(choice => {
         const letter = choice.dataset["letter"];
         choice.innerHTML = currentQuestion[letter];
     });
-    remainingQuestions.splice(currentQuestion, 1);
+   // remainingQuestions.splice(currentQuestion, 1);
     acceptingAnwers = true;
 };
 choices.forEach(choice => {
@@ -84,16 +90,32 @@ choices.forEach(choice => {
         acceptingAnwers = false;
         const displayedQuestion = e.target;
         const chosenAnswer = displayedQuestion.dataset["letter"];
-        const classToApply = chosenAnswer == currentQuestion ? "correct" : "wrong";
-        if(classToApply)
-        {
-            score++;
-        console.log(score);
+        //const classToApply = chosenAnswer == currentQuestion ? "correct" : "wrong";
+        //classToApply.
+        if(chosenAnswer==currentQuestion.answer){
+            // alert("correct");
+              var correct=document.querySelector(".correct");
+              correct.textContent=" Correct";
+              score++;
+            //console.log("correct");
+        }else{
+            //alert("wrong");
+           // console.log("wrong");
+           var wrong=document.querySelector(".incorrect");
+           wrong.textContent="Wrong!";
         }
-        getNextQstn();
+        setTimeout(()=>{
+            var correct=document.querySelector(".correct");
+            var wrong=document.querySelector(".incorrect");
+         correct.textContent="";
+         wrong.textContent="";
+        },1500);
+        
+        
+         getNextQstn();
     });
 })
-beginQuiz=countdown();
+onclick=countdown();
 startQuiz();
 
 
