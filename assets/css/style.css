@@ -1,118 +1,109 @@
-*{
+* {
   box-sizing: border-box;
-  
 }
 html {
-  height:100%;
+  height: 100%;
 }
 .header {
-    display:flex;
-    flex-direction: row;
-    color: rebeccapurple;
-  }
-  #countdown{
-    display:flex;
-    flex-direction:row-reverse;
-    
-  }
-  /* Center the Button and the content */
-  .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items:center;  
-  }
-  .welcome {
-    display:flex;
-    flex-direction: column-reverse;
-    text-align:center;
-  }
-  .start {
-    display:flex;
-    }
-  .pcontent {
-    text-align: center;
-    font-size: 2rem;
-    color:rebeccapurple;
-  }
-  
-  
-  #countdown {
-    border-color: yellow;
-  }
-  /*            Ends Here */
-  
-  h1 {
-     font-size:3rem;
-     color:rebeccapurple;
-  }
-  
-  #indexButton {
-     /* increase the size of the button */
-     color:rebeccapurple;
-      height: 54px;
-      width: 175px;
-      background-color: lavender;
-  }
-  
-  #questioncontainer {
-    width:100vw;
-    height:100vh;
-   display: flex;
-   justify-content: center;
-   margin-bottom: 0.5rem;
-   font-size: 10rem;
-   
-  }
-  #D:hover {
-    cursor:pointer;
-    box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
-  }
-  #A:hover{
-    cursor:pointer;
-    box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
-  }
-  #B:hover {
-    cursor:pointer;
-    box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
-  }
-  #C:hover{
-    cursor:pointer;
-    box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
-  }
+  display: flex;
+  flex-direction: row;
+  color: rebeccapurple;
+}
+#countdown {
+  display: flex;
+  flex-direction: row-reverse;
+}
+/* Center the Button and the content */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+}
+.start {
+  display: flex;
+}
+.pcontent {
+  text-align: center;
+  font-size: 2rem;
+  color: rebeccapurple;
+}
+
+#countdown {
+  border-color: yellow;
+}
+/*            Ends Here */
+
+h1 {
+  font-size: 3rem;
+  color: rebeccapurple;
+}
+
+#indexButton {
+  /* increase the size of the button */
+  color: rebeccapurple;
+  height: 54px;
+  width: 175px;
+  background-color: lavender;
+}
+
+#questioncontainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-size: 10rem;
+}
+#D:hover {
+  cursor: pointer;
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+}
+#A:hover {
+  cursor: pointer;
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+}
+#B:hover {
+  cursor: pointer;
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+}
+#C:hover {
+  cursor: pointer;
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+}
 #options {
   margin: 150px;
-  font-size:1rem;
+  font-size: 1rem;
 }
 #A,
 #B,
 #C,
-#D
-{
-  margin:0.1rem;
- border: 0.1rem solid rebeccapurple;
- background-color: rebeccapurple;
- color: white;
+#D {
+  margin: 0.1rem;
+  border: 0.1rem solid rebeccapurple;
+  background-color: rebeccapurple;
+  color: white;
 }
 .choice-text {
-  padding:1rem 1rem;
+  padding: 1rem 1rem;
 }
 #question {
   margin: 3rem;
-  font-size:30px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
   color: rebeccapurple;
-  
-  
 }
 .correct {
-  
   color: rebeccapurple;
   text-align: center;
   margin-bottom: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
-  
 }
 .incorrect {
   color: red;
@@ -121,25 +112,40 @@ html {
   font-size: large;
 }
 
-
-#divBox{
+#divBox {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-
 }
-#name{
+#name {
   border-color: rebeccapurple;
-
 }
 label {
-  color:rebeccapurple;
+  color: rebeccapurple;
 }
-#demo{
- display:flex;
- flex-direction:row;
- justify-content: center;
- align-items:center;
- height:50%;
+#demo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(100, 0, 100, 0.329);
+  width: 100%;
+}
+#flex {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+#printScore{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#order{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(100, 0, 100, 0.329);
 }
