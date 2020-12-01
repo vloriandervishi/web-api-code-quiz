@@ -69,8 +69,8 @@ getNextQstn = () => {
      questionCounter++;
     if (questionCounter > endOfQuestion) {
         localStorage.setItem('score',score);
-        
-        return window.location.assign('/index.html')
+       
+        return window.location.assign('/yourHighScore.html');
         
     }
    
@@ -95,8 +95,9 @@ choices.forEach(choice => {
         if(chosenAnswer==currentQuestion.answer){
             // alert("correct");
               var correct=document.querySelector(".correct");
-              correct.textContent=" Correct";
+              correct.textContent=" Correct!";
               score++;
+              console.log(score);
             //console.log("correct");
         }else{
             //alert("wrong");

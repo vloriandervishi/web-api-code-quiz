@@ -1,5 +1,9 @@
 *{
   box-sizing: border-box;
+  
+}
+html {
+  height:100%;
 }
 .header {
     display:flex;
@@ -43,7 +47,7 @@
      color:rebeccapurple;
   }
   
-  button {
+  #indexButton {
      /* increase the size of the button */
      color:rebeccapurple;
       height: 54px;
@@ -95,12 +99,47 @@
 }
 #question {
   margin: 3rem;
+  font-size:30px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: rebeccapurple;
+  
   
 }
 .correct {
   
-  color: green;
+  color: rebeccapurple;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  
 }
 .incorrect {
   color: red;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: large;
+}
+
+
+#divBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+#name{
+  border-color: rebeccapurple;
+
+}
+label {
+  color:rebeccapurple;
+}
+#demo{
+ display:flex;
+ flex-direction:row;
+ justify-content: center;
+ align-items:center;
+ height:50%;
 }
