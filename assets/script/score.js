@@ -1,6 +1,8 @@
 var getName = document.getElementById("getName").value;
 var hScore = JSON.parse(localStorage.getItem("score")) || [];
-const ArrayObject = [];
+
+
+ 
 // get saved score from script.js and
 // store it into hScore
 // Have after quiz finished to display the score and then prompt to enter name
@@ -11,23 +13,32 @@ const showScore = document.getElementById(
 
 
 function getInput() {
-  var getName = document.getElementById("getName").value;
+ 
+    var getName = document.getElementById("getName").value;
+    
+    
+  
   document.getElementById("demo").innerHTML =
     "HighScore: ";
-    localStorage.setItem(JSON.stringify(getName),JSON.stringify(hScore));
     
+      var br=document.createElement('br');
       var flex= document.getElementById('flex');
        var div= document.createElement('div');
        flex.appendChild(div);
        var ol =document.createElement('ol');
-       var li= document.createElement('li');
+       
+       
+       for(let i=0; i< localStorage.length;i++){
+        var li= document.createElement('li');
        div.setAttribute('id','order');
        div.appendChild(ol);
        ol.appendChild(li);
-       li.appendChild(document.createTextNode(getName));
-       li.appendChild(document.createTextNode(' '));
-       li.appendChild(document.createTextNode(hScore));
-    
+        li.appendChild(document.createTextNode(localStorage.key(i)));
+      li.appendChild(document.createTextNode(': '));
+        li.appendChild(document.createTextNode(localStorage.getItem(localStorage.key(i))));
+       }
+        localStorage.setItem(getName.toString(),JSON.stringify(hScore));
+        
   if (
     document.querySelector("#divBox").style.display === "none" &&
     document.querySelector("#viewScore").style.display === "none" && document.querySelector("#printScore").style.display === "none" 
@@ -42,6 +53,14 @@ function getInput() {
     document.querySelector("#printScore").style.display = "none" 
     
   }
+   
+ 
 
-  
+
+}
+
+
+function getValue (name,value){
+
+    return name,value;
 }
