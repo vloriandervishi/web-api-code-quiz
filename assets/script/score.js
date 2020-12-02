@@ -26,7 +26,7 @@ function getInput() {
        var div= document.createElement('div');
        flex.appendChild(div);
        var ol =document.createElement('ol');
-       
+       localStorage.setItem(getName.toString(),JSON.stringify(hScore));
        
        for(let i=0; i< localStorage.length;i++){
         var li= document.createElement('li');
@@ -34,10 +34,10 @@ function getInput() {
        div.appendChild(ol);
        ol.appendChild(li);
         li.appendChild(document.createTextNode(localStorage.key(i)));
-      li.appendChild(document.createTextNode(': '));
+        li.appendChild(document.createTextNode(': '));
         li.appendChild(document.createTextNode(localStorage.getItem(localStorage.key(i))));
        }
-        localStorage.setItem(getName.toString(),JSON.stringify(hScore));
+       
         
   if (
     document.querySelector("#divBox").style.display === "none" &&
@@ -59,8 +59,3 @@ function getInput() {
 
 }
 
-
-function getValue (name,value){
-
-    return name,value;
-}

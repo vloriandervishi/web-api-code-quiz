@@ -11,7 +11,7 @@ let questions = [
     b: "DI",
     c: "UI",
     d: "List",
-    answer: "a",
+    answer: "a"
   },
   {
     question: "Who is making the Web Standards?",
@@ -19,7 +19,7 @@ let questions = [
     b: "Microsoft",
     c: "Apple",
     d: "The world wide web consortium",
-    answer: "d",
+    answer: "d"
   },
   {
     question: "Choose the correct HTML tag for the largest heading.",
@@ -27,10 +27,35 @@ let questions = [
     b: "Heading",
     c: "head",
     d: "h6",
-    answer: "a",
+    answer: "a"
   },
+  {
+      question: "What is the reason for avoiding the attributes property in the HTML DOM?",
+      a: "Found Unecessary",
+      b: "Attributes don’t have attributes",
+      c: "Attributes have attributes",
+      d: "Considered irrelevant",
+      answer: "b"
+      
+  },
+  {
+      question: "What is the purpose of the method nodeMap.setNamedItem()?",
+      a: "Sets ID",
+      b: "Sets attribute node",
+      c: "Sets element name",
+      d: "Sets element type",
+      answer: "b"
+  },
+  {
+      question: "How is everything treated in HTML DOM?",
+      a: "Node",
+      b: "Attributes",
+      c: "Elements",
+      d: "Arrays",
+      answer: "a"
+  }
 ];
-const endOfQuestion = 3;
+const endOfQuestion = questions.length;
 let currentQuestion = {};
 let acceptingAnwers = false;
 let score = 0;
@@ -39,7 +64,7 @@ let remainingQuestions = [];
 
 function countdown() {
   time.textContent = "";
-  var timeLeft = 30;
+  var timeLeft = 60;
   var timeInterval = setInterval(function () {
     if (timeLeft > 1) {
       time.textContent = timeLeft + "seconds remianing";
@@ -92,14 +117,15 @@ choices.forEach((choice) => {
       // alert("correct");
       var correct = document.querySelector(".correct");
       correct.textContent = " Correct!";
-      score++;
-      console.log(score);
+      score+=10;
+     // console.log(score);
       //console.log("correct");
     } else {
       //alert("wrong");
       // console.log("wrong");
       var wrong = document.querySelector(".incorrect");
       wrong.textContent = "Wrong!";
+      score-=10;
     }
     setTimeout(() => {
       var correct = document.querySelector(".correct");

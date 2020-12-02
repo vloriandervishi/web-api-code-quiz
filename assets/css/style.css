@@ -77,6 +77,9 @@ h1 {
   cursor: pointer;
   box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
 }
+li { 
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+}
 #options {
   margin: 150px;
   font-size: 1rem;
@@ -118,20 +121,29 @@ h1 {
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
+  
 }
-#name {
+#getName {
   border-color: rebeccapurple;
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+  width: 221px;
+  padding-bottom: 9px;
+  margin-top: 55px;
+  
 }
 label {
   color: rebeccapurple;
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+  border-color: rebeccapurple;
 }
-#demo:hover{
+#demo{
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: rgba(253, 155, 253, 0.062);
   margin:10px 10px 10px 10px;
-  
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+  width: 100%;
   font-size: xx-large;
 }
 #flex {
@@ -145,8 +157,9 @@ label {
   justify-content: center;
   align-items: center;
   font-size: larger;
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
 }
-#order:hover{
+#order{
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -154,5 +167,13 @@ label {
   color:rebeccapurple;
   font-size: xx-large;
   background-color: rgba(156, 48, 156, 0.062);
-  
+  width:100%;
+}
+#hsButton{
+  background-color:rgba(85, 13, 156, 0.10);
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
+}
+#viewScore{
+  background-color:rgba(85, 13, 156, 0.10);
+  box-shadow: 0 0.6rem 1.4rem 0 rebeccapurple;
 }
