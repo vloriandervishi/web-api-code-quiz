@@ -1,5 +1,10 @@
 # web-api-code-quiz
 
+## Languages
+HTML
+CSS
+JAVASCRIPT
+DOM
 
 ## Purpose: 
 
@@ -17,3 +22,7 @@ THEN I can save my initials and score
 
 ## URL
 https://vloriandervishi.github.io/web-api-code-quiz/.
+
+## Contributer 
+Vlorian Dervishi 
+
