@@ -92,7 +92,7 @@ getNextQstn = () => {
   if (questionCounter > endOfQuestion) {
     localStorage.setItem("score", score);
 
-    return window.location.assign("yourHighScore.html");
+    return window.location.href= '/yourHighScore.html';
   }
 
   currentQuestion = remainingQuestions[questionCounter - 1];
