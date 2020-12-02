@@ -89,7 +89,7 @@ startQuiz = () => {
 };
 getNextQstn = () => {
   questionCounter++;
-  if (questionCounter > endOfQuestion) {
+  if (questionCounter >= endOfQuestion) {
     localStorage.setItem("score", score);
 
     return window.location.href= '/yourHighScore.html';
