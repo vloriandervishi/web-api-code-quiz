@@ -26,3 +26,6 @@ https://vloriandervishi.github.io/web-api-code-quiz/.
 ## Contributer 
 Vlorian Dervishi 
 
+![Countdown Timer](https://user-images.githubusercontent.com/69487303/100946532-29d7a000-34c9-11eb-95b5-420778ec4c9f.gif)
+
+
