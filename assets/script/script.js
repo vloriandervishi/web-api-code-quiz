@@ -64,20 +64,75 @@ let remainingQuestions = [];
 
 function countdown() {
   time.textContent = "";
-  var timeLeft = 60;
+   var timeLeft = 30;
   var timeInterval = setInterval(function () {
     if (timeLeft > 1) {
-      time.textContent = timeLeft + "seconds remianing";
+      time.textContent = timeLeft + "secs";
       timeLeft--;
     } else if (timeLeft === 1) {
-      time.textContent = timeLeft + "seconds remaining";
+      time.textContent = timeLeft + "secs";
 
       timeLeft--;
     } else {
-      time.textContent = " ";
+      time.textContent = "You ran out of Time! ";
       clearInterval(timeInterval);
+      return window.location.href='./yourHighScore.html';
+     
     }
   }, 1000);
+  getNextQstn = () => {
+    questionCounter++;
+    if (questionCounter >= endOfQuestion) {
+      localStorage.setItem("score", score);
+  
+      return window.location.href= './yourHighScore.html';
+    }
+  
+    currentQuestion = remainingQuestions[questionCounter - 1];
+    question.innerHTML = currentQuestion.question;
+  
+    choices.forEach((choice) => {
+      const letter = choice.dataset["letter"];
+      choice.innerHTML = currentQuestion[letter];
+    });
+    // remainingQuestions.splice(currentQuestion, 1);
+    acceptingAnwers = true;
+  };
+  choices.forEach((choice) => {
+    choice.addEventListener("click", (e) => {
+      if (!acceptingAnwers) return;
+      acceptingAnwers = false;
+      const displayedQuestion = e.target;
+      const chosenAnswer = displayedQuestion.dataset["letter"];
+      //const classToApply = chosenAnswer == currentQuestion ? "correct" : "wrong";
+      //classToApply.
+      if (chosenAnswer == currentQuestion.answer) {
+        // alert("correct");
+        var correct = document.querySelector(".correct");
+        correct.textContent = " Correct!";
+        score+=10;
+       // console.log(score);
+        //console.log("correct");
+      } else {
+        //alert("wrong");
+        // console.log("wrong");
+        var wrong = document.querySelector(".incorrect");
+        wrong.textContent = "Wrong!";
+        // subtracts time for getting question wrong
+        timeLeft-=15;
+       
+        
+      }
+      setTimeout(() => {
+        var correct = document.querySelector(".correct");
+        var wrong = document.querySelector(".incorrect");
+        correct.textContent = "";
+        wrong.textContent = "";
+      }, 1500);
+  
+      getNextQstn();
+    });
+  });
 }
 
 startQuiz = () => {
@@ -87,55 +142,7 @@ startQuiz = () => {
   // console.log(availableQuestions);
   getNextQstn();
 };
-getNextQstn = () => {
-  questionCounter++;
-  if (questionCounter >= endOfQuestion) {
-    localStorage.setItem("score", score);
 
-    return window.location.href= './yourHighScore.html';
-  }
-
-  currentQuestion = remainingQuestions[questionCounter - 1];
-  question.innerHTML = currentQuestion.question;
-
-  choices.forEach((choice) => {
-    const letter = choice.dataset["letter"];
-    choice.innerHTML = currentQuestion[letter];
-  });
-  // remainingQuestions.splice(currentQuestion, 1);
-  acceptingAnwers = true;
-};
-choices.forEach((choice) => {
-  choice.addEventListener("click", (e) => {
-    if (!acceptingAnwers) return;
-    acceptingAnwers = false;
-    const displayedQuestion = e.target;
-    const chosenAnswer = displayedQuestion.dataset["letter"];
-    //const classToApply = chosenAnswer == currentQuestion ? "correct" : "wrong";
-    //classToApply.
-    if (chosenAnswer == currentQuestion.answer) {
-      // alert("correct");
-      var correct = document.querySelector(".correct");
-      correct.textContent = " Correct!";
-      score+=10;
-     // console.log(score);
-      //console.log("correct");
-    } else {
-      //alert("wrong");
-      // console.log("wrong");
-      var wrong = document.querySelector(".incorrect");
-      wrong.textContent = "Wrong!";
-      score-=10;
-    }
-    setTimeout(() => {
-      var correct = document.querySelector(".correct");
-      var wrong = document.querySelector(".incorrect");
-      correct.textContent = "";
-      wrong.textContent = "";
-    }, 1500);
-
-    getNextQstn();
-  });
-});
 onclick = countdown();
 startQuiz();
+
